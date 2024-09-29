@@ -38,10 +38,8 @@ This file serves as the entry point for the app. It initializes the `MyApp` clas
 ```dart
 void main() {
   runApp(MyApp());
-}
+}```
 
-markdown
-Copy code
 ### 2. TemperatureConversionScreen
 
 This is a `StatefulWidget` responsible for managing the input and conversion logic. It includes:
@@ -61,7 +59,7 @@ double _temperatureConversion(double temperature) {
   return _isFahrenheitToCelsius
       ? (temperature - 32) * 5 / 9
       : temperature * 9 / 5 + 32;
-}
+}```
 
 ### 4. History Management
 
