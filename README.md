@@ -39,3 +39,36 @@ This file serves as the entry point for the app. It initializes the `MyApp` clas
 void main() {
   runApp(MyApp());
 }
+
+markdown
+Copy code
+### 2. TemperatureConversionScreen
+
+This is a `StatefulWidget` responsible for managing the input and conversion logic. It includes:
+
+- **Form Handling**: Uses a `GlobalKey<FormState>` to validate and save user input. This ensures that the user inputs a valid temperature value before performing the conversion.
+  
+- **Conversion Type Selection**: A switch is provided to toggle between Fahrenheit-to-Celsius and Celsius-to-Fahrenheit conversions, ensuring that only one conversion type is selected at any given time.
+
+- **User Feedback**: Displays a Snackbar with the converted value after the conversion is performed.
+
+### 3. Conversion Logic
+
+The conversion formulas are implemented in the `_temperatureConversion` method, which handles the actual calculation based on the selected conversion type:
+
+```dart
+double _temperatureConversion(double temperature) {
+  return _isFahrenheitToCelsius
+      ? (temperature - 32) * 5 / 9
+      : temperature * 9 / 5 + 32;
+}
+
+### 4. History Management
+
+The app maintains a history of conversions in a list, displayed in the `HistoryList` widget. Each entry includes:
+
+- **Conversion Type**: Indicates whether the conversion was from Fahrenheit to Celsius or from Celsius to Fahrenheit (e.g., "F to C" or "C to F").
+- **Original Temperature Value**: The temperature value that the user inputted.
+- **Converted Result**: The resulting temperature after conversion, formatted to two decimal places.
+
+The history list is dynamically updated each time a conversion is performed. This allows users to easily reference their previous calculations and enhances the overall usability of the app. The `HistoryList` widget uses a `ListView` to present the history in a clean and organized manner, making it straightforward for users to track their conversion history.
