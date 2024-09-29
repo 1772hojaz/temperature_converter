@@ -35,10 +35,11 @@ The app is built using Flutter, a UI toolkit for creating natively compiled appl
 
 This file serves as the entry point for the app. It initializes the `MyApp` class, which creates the `MaterialApp` and sets the home screen.
 
-```dart
-void main() {
-  runApp(MyApp());
-}```
+         ```dart
+         void main() {
+           runApp(MyApp());
+         }
+
 
 ### 2. TemperatureConversionScreen
 
@@ -54,12 +55,12 @@ This is a `StatefulWidget` responsible for managing the input and conversion log
 
 The conversion formulas are implemented in the `_temperatureConversion` method, which handles the actual calculation based on the selected conversion type:
 
-```dart
-double _temperatureConversion(double temperature) {
-  return _isFahrenheitToCelsius
-      ? (temperature - 32) * 5 / 9
-      : temperature * 9 / 5 + 32;
-}```
+      ```dart
+      double _temperatureConversion(double temperature) {
+        return _isFahrenheitToCelsius
+            ? (temperature - 32) * 5 / 9
+            : temperature * 9 / 5 + 32;
+      }
 
 ### 4. History Management
 
