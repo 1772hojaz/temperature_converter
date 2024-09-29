@@ -71,11 +71,13 @@ class _TemperatureConversionScreenState
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
-                            'Converted: ${convertedValue.toStringAsFixed(2)}'),
+                            'Converted Value: ${convertedValue.toStringAsFixed(2)}'),
                       ),
                     );
 
-                    setState(() {}); // Update the UI to show the history list
+                    // Update the history list
+
+                    setState(() {});
                   }
                 },
               ),
@@ -91,7 +93,7 @@ class _TemperatureConversionScreenState
 
   double _temperatureConversion(double temperature) {
     return _isFahrenheitToCelsius
-        ? (temperature - 32) * 5 / 9 // F to C
-        : temperature * 9 / 5 + 32; // C to F
+        ? (temperature - 32) * 5 / 9
+        : temperature * 9 / 5 + 32;
   }
 }

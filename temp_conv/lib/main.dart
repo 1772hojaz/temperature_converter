@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Temperature Conversion',
       theme: ThemeData(
-        primarySwatch: const Color.fromARGB(255, 107, 33, 243),
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: TemperatureConversionScreen(),
